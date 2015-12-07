@@ -1,0 +1,21 @@
+<template name="pictures">
+	{{> hello}}
+	{{> list}}
+</template>
+
+<template name="hello">
+	<div class="take-photo">
+  		<button class="btn btn-default">take photo</button>
+  	</div>
+</template>
+
+<template name="list">
+  	{{#each pictureLists}}
+  	<div>
+	  	<img data-id={{_id}} class='small-image' src="{{pic}}"/>
+	  	<br/>
+	  	{{time}}
+	   </div>
+  	{{/each}}
+
+</template>

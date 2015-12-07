@@ -1,0 +1,37 @@
+{
+  "definitions": {
+    "accordion": true,
+    "ad": true,
+    "dropdown": true,
+    "list": true,
+    "icon": true,
+    "api": true,
+    "button": true,
+    "container": true,
+    "divider": true,
+    "header": true,
+    "icon": true,
+    "input": true,
+    "image": true,
+    "loader": true,
+    "segment": true,
+    "grid": true,
+    "reset": true,
+    "site": true,
+    "menu": true,
+    "transition": true,
+    "sidebar": true,
+    "visibility": true,
+    "form": true,
+    "dimmer": true
+  },
+  "themes": {
+    "amazon": false,
+    "basic": false,
+    "bookish": false,
+    "bootstrap3": false,    
+    "chubby": false,
+    "classic": false,
+    "default": true
+  }
+}

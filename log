@@ -1,0 +1,186 @@
+[Fri Dec 25 2015 06:56:17 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:56:17 GMT+0000 (UTC)] INFO STATUS null -> starting
+[Fri Dec 25 2015 06:56:23 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+throw(ex);
+^
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] INFO STATUS running -> starting
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:56:33 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] WARNING
+throw(ex);
+^
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] INFO STATUS running -> starting
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:56:37 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:56:41 GMT+0000 (UTC)] WARNING
+throw(ex);
+^
+[Fri Dec 25 2015 06:56:41 GMT+0000 (UTC)] WARNING 
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+[Fri Dec 25 2015 06:56:41 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:56:41 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 06:56:41 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 06:56:54 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:56:54 GMT+0000 (UTC)] INFO STATUS waiting -> starting
+[Fri Dec 25 2015 06:56:54 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:56:58 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+[Fri Dec 25 2015 06:56:58 GMT+0000 (UTC)] WARNING
+throw(ex);
+^
+[Fri Dec 25 2015 06:56:58 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:56:58 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 06:56:58 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 06:57:21 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:57:21 GMT+0000 (UTC)] INFO STATUS waiting -> starting
+[Fri Dec 25 2015 06:57:21 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:57:25 GMT+0000 (UTC)] WARNING
+throw(ex);
+^
+[Fri Dec 25 2015 06:57:25 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+[Fri Dec 25 2015 06:57:25 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:57:27 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 06:57:27 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 06:58:28 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 06:58:28 GMT+0000 (UTC)] INFO STATUS waiting -> starting
+[Fri Dec 25 2015 06:58:28 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 06:58:37 GMT+0000 (UTC)] WARNING 
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+[Fri Dec 25 2015 06:58:37 GMT+0000 (UTC)] WARNING
+throw(ex);
+^
+[Fri Dec 25 2015 06:58:37 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 06:58:37 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 06:58:37 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 07:00:56 GMT+0000 (UTC)] INFO STATUS waiting -> starting
+[Fri Dec 25 2015 07:00:56 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 07:00:56 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 07:01:05 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+throw(ex);
+^
+[Fri Dec 25 2015 07:01:05 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 07:01:05 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 07:01:05 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 07:07:00 GMT+0000 (UTC)] INFO STATUS waiting -> starting
+[Fri Dec 25 2015 07:07:00 GMT+0000 (UTC)] NOTICE Starting application on port
+31328
+[Fri Dec 25 2015 07:07:00 GMT+0000 (UTC)] INFO STATUS starting -> running
+[Fri Dec 25 2015 07:07:04 GMT+0000 (UTC)] WARNING
+/meteor/dev_bundles/0.5.16/lib/node_modules/fibers/future.js:245
+throw(ex);
+^
+[Fri Dec 25 2015 07:07:04 GMT+0000 (UTC)] WARNING Error: EACCES, permission
+denied '/.uploads/'
+at Object.fs.mkdirSync (fs.js:654:18)
+at checkCreateDirectory
+(packages/tomi_upload-server/upload_server.js:527:1)
+at Object.UploadServer.init
+(packages/tomi_upload-server/upload_server.js:104:1)
+at server/init.js:2:15
+at
+/meteor/containers/b8b92f95-a5fa-d8d6-bbd5-a1f3c3ff69ca/bundle/programs/server/boot.js:249:5
+[Fri Dec 25 2015 07:07:04 GMT+0000 (UTC)] INFO STATUS running -> waiting
+[Fri Dec 25 2015 07:07:04 GMT+0000 (UTC)] ERROR Application crashed with code:
+8
+[Fri Dec 25 2015 07:08:50 GMT+0000 (UTC)] INFO HIT /cfs/servertime
+222.39.24.148
+[Fri Dec 25 2015 07:08:56 GMT+0000 (UTC)] INFO HIT /cfs/servertime
+222.39.24.148
+[Fri Dec 25 2015 07:10:10 GMT+0000 (UTC)] INFO HIT /cfs/servertime
+222.39.24.148
+[Fri Dec 25 2015 07:10:16 GMT+0000 (UTC)] INFO HIT /cfs/servertime
+222.39.24.148
+[Fri Dec 25 2015 07:10:28 GMT+0000 (UTC)] INFO HIT / 222.39.24.148
+[Fri Dec 25 2015 07:10:34 GMT+0000 (UTC)] INFO HIT / 222.39.24.148
+[Fri Dec 25 2015 07:11:00 GMT+0000 (UTC)] INFO HIT /favicon.ico 222.39.24.148
+[Fri Dec 25 2015 07:11:06 GMT+0000 (UTC)] INFO HIT /favicon.ico 222.39.24.148
+[Fri Dec 25 2015 07:11:42 GMT+0000 (UTC)] INFO HIT / 222.39.24.148
+[Fri Dec 25 2015 07:11:48 GMT+0000 (UTC)] INFO HIT / 222.39.24.148
+

@@ -1,0 +1,52 @@
+<template name="stores">
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+					</a>
+					<a class="needsclick toc item">HOME</a>
+					{{#if isInRole 'admin' 'web-owner'}}
+					<a class="needsclick item js-new-nav">
+						<span class="icon-plus"></span>
+						New List
+					</a>
+					{{/if}}
+                {{> navsList}}
+					<div class="right item">
+						<a class="ui item"> <i class="search icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui container">
+			<h2 class="ui dividing header">Stores</h2>
+			<div class="ui middle aligned stackable grid container">
+				<div class="row">
+					{{#each stores}}
+					<div class="header">
+						<img src="./assets/images/wireframe/square-image.png" class="ui avatar right spaced image">{{storeName}}</div>
+					<div class="description">
+						<img src="./assets/images/wireframe/paragraph.png" class="ui wireframe image"></div>
+					<div class="ui four column doubling stackable grid container">
+						{{#each storePictures _id}}
+						<div class="column">
+							<p></p>
+							<img src="{{pic}}"/>
+							<p></p>
+						</div>
+						{{/each}}
+					</div>
+					{{else}}
+						no stores found
+				{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

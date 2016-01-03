@@ -1,0 +1,120 @@
+meteor add dispatch:accounts-sms
+Server
+
+// Configure to use twilio.
+
+Meteor.settings.TWILIO.FROM = "+18136994361";
+Meteor.settings.TWILIO.SID = "AC92f73477f2e5fe7da02a56ca22cdc167";
+Meteor.settings.TWILIO.TOKEN = "da9c241a811f24b735dc4e02a1272254";
+
+Accounts.sms.configure({
+  twilio: {
+    from: Meteor.settings.TWILIO.FROM,
+    sid: Meteor.settings.TWILIO.SID,
+    token: Meteor.settings.TWILIO.TOKEN
+  }
+});
+Client
+
+// Send the verification code sms.
+Meteor.sendVerificationCode('+12222222222');
+// Login with the verification code sms.
+Meteor.loginWithSms('+12222222222', '2222');
+
+
+/www.twilio.com
+meteor add okland:accounts-phone
+
+
+meteor add telescope:releases
+
+meteor add harrison:papa-parse csv
+http://papaparse.com
+
+meteor add cfs:filesystem 
+cfs:standard-packages FS undified
+no method substr
+
+meteor add yogiben:autoform-file
+
+
+autoform
+
+
+$ meteor add tomi:upload-server
+$ meteor add tomi:upload-jquery
+upload file
+
+
+Imagemagick
+ 是一个图象处理软件。它可以编辑、显示包括JPEG、TIFF、PNM、PNG 、GIF和Photo CD在内的绝大多数当今最流行的图象格式
+
+meteor add angularutils:pagination分页
+
+
+meteor add ecmascript
+Promise
+
+A Promise allows its owner to wait for a value that might not be
+available yet. See this tutorial for more
+details about the API and motivation. The Meteor Promise
+implementation is especially useful because it runs all callback
+functions in recycled Fibers, so you can use any Meteor API, including
+those that yield (e.g. HTTP.get, Meteor.call, or MongoCollection),
+and you never have to call Meteor.bindEnvironment.
+
+Map
+
+An associative key-value data structure where the keys can be any
+JavaScript value (not just strings). Lookup and insertion take constant
+time.
+
+Set
+
+A collection of unique JavaScript values of any type. Lookup and
+insertion take constant time.
+
+Symbol
+
+An implementation of the global
+Symbols namespace
+that enables a number of other ES2015 features, such as for-of loops
+and Symbol.iterator methods: [1,2,3][Symbol.iterator]().
+
+Polyfills for the following Object-related methods:
+
+Object.assign
+Object.is
+Object.setPrototypeOf
+Object.prototype.toString (fixes @@toStringTag support)
+Complete reference here.
+
+Polyfills for the following String-related methods:
+
+String.fromCodePoint
+String.raw
+String.prototype.includes
+String.prototype.startsWith
+String.prototype.endsWith
+String.prototype.repeat
+String.prototype.codePointAt
+String.prototype.trim
+Complete reference here.
+
+Polyfills for the following Array-related methods:
+
+Array.from
+Array.of
+Array.prototype.copyWithin
+Array.prototype.fill
+Array.prototype.find
+Array.prototype.findIndex
+Complete reference here.
+
+Polyfills for the following Function-related properties:
+
+Function.prototype.name (fixes IE9+)
+Function.prototype[Symbol.hasInstance] (fixes IE9+)
+Complete reference here.
+
+device.js不准确，魅族检测出ios

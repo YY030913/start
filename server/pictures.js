@@ -1,10 +1,23 @@
 if (Meteor.isServer) {
-	Meteor.publish('pictureLists', function () {
-	    var self = this;
-	    // send the "ready" message in 2 seconds.
-	    setTimeout(function () {
-	    	picturesColl.find();
-	      	self.ready();
-	    }, 2000);
-  	});
+    Meteor.publish('pictureLists', function() {
+        var self = this;
+        picturesColl.find();
+        self.ready();
+    });
+
+    Meteor.publish('pictureById', function(pictureId) {
+        var self = this;
+        picturesColl.findOne({
+            pictureId: pictureId
+        });
+        self.ready();
+    });
+
+    Meteor.publish('picturesByUser', function(userId) {
+        var self = this;
+        picturesColl.find({
+            userId: userId
+        });
+        self.ready();
+    });
 }

@@ -59,16 +59,27 @@
   display: none;
 }
 
+.secondary.pointing.menu .right.item {
+  position: absolute;
+  right: 1em;
+  top: 2rem;
+}
+
 @media only screen and (max-width: 700px) {
   .ui.fixed.menu {
     display: none !important;
   }
   .secondary.pointing.menu .item,
   .secondary.pointing.menu .menu {
-    display: none;
+    display: none !important;
   }
-  .secondary.pointing.menu .toc.item {
-    display: block;
+  .secondary.pointing.menu .toc.item,
+  .secondary.pointing.menu .right.item, 
+  .secondary.pointing.menu .right.item .item {
+    display: block !important;
+  }
+  .secondary.pointing.menu .right.item {
+    top: 0.7rem;
   }
   .masthead.segment {
     min-height: 350px;

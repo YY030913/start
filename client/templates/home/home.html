@@ -1,65 +1,153 @@
 <template name="home">
-
-    <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
-            <div class="row">
-                <div class="eight wide column">
-                    <h3 class="ui header">We Help Companies and Companions</h3>
-                    <p>
-                        We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
-                    </p>
-                    <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                    <p>
-                        Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
-                    </p>
-                </div>
-                <div class="six wide right floated column">
-                    <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image"></div>
-            </div>
-            <div class="row">
-                <div class="center aligned column">
-                    <a class="ui huge button">Check Them Out</a>
+    <!-- header -->
+    <div class="following bar">
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="needsclick toc item"> <i class="sidebar icon"></i>
+                    </a>
+                    <a class="needsclick toc item">HOME</a>
+                    {{#if isInRole 'admin' 'web-owner'}}
+                    <a class="needsclick item js-new-nav">
+                        <span class="icon-plus"></span>
+                        New List
+                    </a>
+                    {{/if}}
+                {{> navsList}}
+                    <div class="right item">
+                        <a class="ui item"> <i class="search icon"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="ui vertical stripe quote segment">
-        <div class="ui equal width stackable internally celled grid">
-            <div class="center aligned row">
+    <div class="ui vertical stripe intro segment">
+        <div class="ui container">
+            <div class="ui left aligned grid">
                 <div class="column">
-                    <h3>"What a Company"</h3>
-                    <p>That is what they all say about us</p>
-                </div>
-                <div class="column">
-                    <h3>"I shouldn't have gone with their competitor."</h3>
-                    <p>
-                        <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b>
-                        Chief Fun Officer Acme Toys
-                    </p>
+                    {{> slider}}
+                    <h1 class="ui dividing header aligned left">pics</h1>
+                    <div class="ui segment">
+                        <div class="ui dropdown icon">
+                            <a class="needsclick toc item">
+                                <i class="options icon"></i>
+                            </a>
+                            <div class="menu">
+                                <div class="item" data-value="Save Post">
+                                    <i class="save icon"></i>
+                                    Save Post
+                                </div>
+                                <div class="item" data-value="Edit Post">
+                                    <i class="edit icon"></i>
+                                    Edit Post
+                                </div>
+                                <div class="item" data-value="Remove Post">
+                                    <i class="delete icon"></i>
+                                    Remove Post
+                                </div>
+                                <div class="item" data-value="Hide Post">
+                                    <i class="hide icon"></i>
+                                    Hide Post
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui menu">
+                            <a class="browse item">
+                                Browse
+                                <i class="dropdown icon"></i>
+                            </a>
+                            <div class="ui fluid popup bottom left transition hidden" style="top: 554px; left: 1px; bottom: auto; right: auto; width: 705px;">
+                                <div class="ui four column relaxed divided grid">
+                                    <div class="column">
+                                        <h4 class="ui header">Fabrics</h4>
+                                        <div class="ui link list">
+                                            <a class="item">Cashmere</a>
+                                            <a class="item">Linen</a>
+                                            <a class="item">Cotton</a>
+                                            <a class="item">Viscose</a>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <h4 class="ui header">Size</h4>
+                                        <div class="ui link list">
+                                            <a class="item">Small</a>
+                                            <a class="item">Medium</a>
+                                            <a class="item">Large</a>
+                                            <a class="item">Plus Sizes</a>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <h4 class="ui header">Colors</h4>
+                                        <div class="ui link list">
+                                            <a class="item">Neutrals</a>
+                                            <a class="item">Brights</a>
+                                            <a class="item">Pastels</a>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <h4 class="ui header">Types</h4>
+                                        <div class="ui link list">
+                                            <a class="item">Knitwear</a>
+                                            <a class="item">Outerwear</a>
+                                            <a class="item">Pants</a>
+                                            <a class="item">Shoes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="item">
+                                <i class="cart icon"></i>
+                                Checkout
+                            </a>
+                        </div>
+                        <div class="ui right labeled input">
+                            <input placeholder="Placeholder" type="text">
+                            <div class="ui dropdown label">
+                                <div class="text">Dropdown</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item">Choice 1</div>
+                                    <div class="item">Choice 2</div>
+                                    <div class="item">Choice 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui multiple selection dropdown" tabindex="0">
+                            <input name="gender" type="hidden" value="default,default2">
+                            <i class="dropdown icon"></i>
+                            <a class="ui label" data-value="default">
+                                Default Value
+                                <i class="delete icon"></i>
+                            </a>
+                            <a class="ui label" data-value="default2">
+                                Second Default
+                                <i class="delete icon"></i>
+                            </a>
+                            <div class="default text">Default</div>
+                            <div class="menu transition hidden" tabindex="-1">
+                                <div class="item" data-value="0">Value</div>
+                                <div class="item selected" data-value="1">Another Value</div>
+                                <div class="item active filtered" data-value="default">Default Value</div>
+                                <div class="item selected active filtered" data-value="default2">Second Default</div>
+                            </div>
+                        </div>
+                        <h3 class="ui header">We Help Companies and Companions</h3>
+                        <p>
+                            We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
+                        </p>
+                        <h3 class="ui header">We Make Bananas That Can Dance</h3>
+                        <p>
+                            Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+                        </p>
+                    </div>
+                    <div class="six wide right floated column">
+                        <img src="favicon.png" class="ui large bordered rounded image"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="ui vertical stripe segment">
-        <div class="ui text container">
-            <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-            <p>
-                Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.
-            </p>
-            <a class="ui large button">Read More</a>
-            <h4 class="ui horizontal header divider">
-                <a href="#">Case Studies</a>
-            </h4>
-            <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-            <p>
-                Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
-            </p>
-            <a class="ui large button">I'm Still Quite Interested</a>
-        </div>
-    </div>
-    {{> footer}}
 </template>
 
 <template name="footer">

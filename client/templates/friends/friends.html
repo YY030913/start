@@ -1,0 +1,140 @@
+<template name="friends">
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+					</a>
+					<a class="needsclick toc item">HOME</a>
+					{{#if isInRole 'admin' 'web-owner'}}
+					<a class="needsclick item js-new-nav">
+						<span class="icon-plus"></span>
+						New List
+					</a>
+					{{/if}}
+                {{> navsList}}
+					<div class="right item">
+						<a class="ui item"> <i class="search icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="stackable very relaxed ui grid container">
+			<div class="row">
+				<div class="seven wide column">
+					<h1 class="ui header aligned left">firends</h1>
+				</div>
+				<div class="nine wide column">
+					<div class="ui three buttons">
+						<button class="ui active button">One</button>
+						<button class="ui button">Two</button>
+						<button class="ui button">Three</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui divider"></div>
+			<div class="row">
+				<div class="six wide column">
+					<!---start-chat-sectioin-->
+					<div class="ui top attached tabular menu">
+				        <a class="item active" data-tab="first">好友</a>
+				        <a class="item" data-tab="second">群租</a>
+				        <a class="item" data-tab="third">消息</a>
+	     			</div>
+	     			<div class="ui bottom attached tab segment active" data-tab="first">
+						<div class="chat-section">
+							<div class="chat-people-grids contentHolder" id="Default">
+							<!-- {{#each friends}} -->
+								<div class="chat-people-grid">
+									<div class="chat-people-pic-grid">
+										<img class="ui circular small image" src="images/1.jpg" title="chat-people-name" />
+										<div class="floating ui red circular label">22</div>
+									</div>
+									<div class="chat-people-message">
+										<h3>
+											<a href="#">Olaf</a>
+										</h3>
+										<p>sure hun, see you later</p>
+									</div>
+									<div class="chat-people-message-post-date">
+										<span>
+											<a href="#">Friday, 15</a>
+										</span>
+									</div>
+									<div class="clear"></div>
+								</div>
+							<!-- {{else}}
+								not found
+							{{/each}} -->
+							</div>
+						</div>
+					</div>
+					<div class="ui bottom attached tab segment" data-tab="second">
+						<div class="chat-section">
+							<div class="chat-people-grids contentHolder" id="Default">
+							{{#each friendsGroup}}
+								<div class="chat-people-grid">
+									<div class="chat-people-pic-grid">
+										<img class="chat-people-pic" src="images/chat-people-pic1.png" title="chat-people-name" />
+										<span class="chat-people-cstatus"></span>
+									</div>
+									<div class="chat-people-message">
+										<h3>
+											<a href="#">Olaf</a>
+										</h3>
+										<p>sure hun, see you later</p>
+									</div>
+									<div class="chat-people-message-post-date">
+										<span>
+											<a href="#">Friday, 15</a>
+										</span>
+									</div>
+									<div class="clear"></div>
+								</div>
+							{{else}}
+								not found
+							{{/each}}
+							</div>
+						</div>
+					</div>
+					<div class="ui bottom attached tab segment" data-tab="third">
+						<div class="chat-section">
+							<div class="chat-people-grids contentHolder" id="Default">
+							{{#each friendsMessages}}
+								<div class="chat-people-grid">
+									<div class="chat-people-pic-grid">
+										<img class="chat-people-pic" src="images/chat-people-pic1.png" title="chat-people-name" />
+										<span class="chat-people-cstatus"></span>
+									</div>
+									<div class="chat-people-message">
+										<h3>
+											<a href="#">Olaf</a>
+										</h3>
+										<p>sure hun, see you later</p>
+									</div>
+									<div class="chat-people-message-post-date">
+										<span>
+											<a href="#">Friday, 15</a>
+										</span>
+									</div>
+									<div class="clear"></div>
+								</div>
+							{{else}}
+								not found
+							{{/each}}
+							</div>
+						</div>
+					</div>
+					<!---//End-chat-sectioin-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,119 @@
+<template name="vistors">
+    <!-- header -->
+    <div class="following bar">
+        <div class="ui inverted vertical masthead center aligned segment">
+
+            <div class="ui secondary inverted pointing menu">
+                <a class="needsclick toc item"> <i class="sidebar icon"></i>
+                </a>
+                <a class="needsclick toc item">HOME</a>
+                {{#if isInRole 'admin' 'web-owner'}}
+                <a class="needsclick item js-new-nav">
+                    <span class="icon-plus"></span>
+                    New List
+                </a>
+                {{/if}}
+                {{> navsList}}
+                <div class="right item">
+                    <div class="needsclick item">
+                        <div class="ui inverted icon input search"> <i class="search icon"></i>
+                            <input type="text" width="100px" placeholder="Search"></div>
+                    </div>
+                    <div class="needsclick item">
+                        <div class="ui floating dropdown icon">
+                            <i class="options icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="Save Post">
+                                    <i class="save icon"></i>
+                                    Save Post
+                                </div>
+                                <div class="item" data-value="Edit Post">
+                                    <i class="edit icon"></i>
+                                    Edit Post
+                                </div>
+                                <div class="item" data-value="Remove Post">
+                                    <i class="delete icon"></i>
+                                    Remove Post
+                                </div>
+                                <div class="item" data-value="Hide Post">
+                                    <i class="hide icon"></i>
+                                    Hide Post
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="needsclick toc item">
+                        <div class="ui floating dropdown icon">
+                            <i class="options icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="Save Post">
+                                    <i class="save icon"></i>
+                                    Save Post
+                                </div>
+                                <div class="item" data-value="Edit Post">
+                                    <i class="edit icon"></i>
+                                    Edit Post
+                                </div>
+                                <div class="item" data-value="Remove Post">
+                                    <i class="delete icon"></i>
+                                    Remove Post
+                                </div>
+                                <div class="item" data-value="Hide Post">
+                                    <i class="hide icon"></i>
+                                    Hide Post
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical stripe segment">
+        <div class="ui container">
+            <h2 class="ui dividing header">Using Themes</h2>
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <table class="ui inverted right aligned table">
+                        <thead>
+                            <tr>
+                                <th class="left aligned">Person</th>
+                                <th>country</th>
+                                <th>province/state</th>
+                                <th>city</th>
+                                <th>area</th>
+                                <th>street</th>
+                                <th>postal_code</th>
+                                <th>latitude</th>
+                                <th>longitude</th>
+                                <th>userAgent</th>
+                                <th>appVersion</th>
+                                <th>time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each vistorsList}}
+                            <tr>
+                                <td class="left aligned">{{user}}</td>
+                                <td>{{country}}</td>
+                                <td>{{administrative_area_level_1}}</td>
+                                <td>{{locality}}</td>
+                                <td>{{sublocality_level_1}}</td>
+                                <td>{{route}}</td>
+                                <td>{{postal_code}}</td>
+                                <td>{{latitude}}</td>
+                                <td>{{longitude}}</td>
+                                <td>{{userAgent}}</td>
+                                <td>{{appVersion}}</td>
+                                <td>{{time}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

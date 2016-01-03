@@ -1,0 +1,81 @@
+<template name="user">
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+					</a>
+					<a class="needsclick toc item">HOME</a>
+					{{#if isInRole 'admin' 'web-owner'}}
+					<a class="needsclick item js-new-nav">
+						<span class="icon-plus"></span>
+						New List
+					</a>
+					{{/if}}
+                {{> navsList}}
+					<div class="right item">
+						<a class="ui item"> <i class="search icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="stackable very relaxed ui grid container">
+			<div class="row">
+				<div class="seven wide column">
+					<h1 class="ui header aligned left">firends</h1>
+				</div>
+				<div class="nine wide column">
+					<div class="ui three buttons">
+						<button class="ui active button">One</button>
+						<button class="ui button">Two</button>
+						<button class="ui button">Three</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="nine wide column">
+					<i class="right chevron icon"></i>
+					<h1 class="ui header">头像</h1>
+				</div>
+				<div class="seven wide column">
+					<div class="eight wide column">
+						<img src="/images/Meteor-logo.png" class="ui circular image">
+						<i class="chevron icon"></i>
+	        		</div>
+	        	</div>
+	        </div>
+
+	        <div class="row">
+	        	<i class="plug icon"></i>
+				姓名：
+	        </div>
+
+	        <div class="row">
+	        	<i class="plug icon"></i>
+				性别：
+	        </div>
+
+	        <div class="row">
+				<i class="plug icon"></i>
+				出生日期：
+	        </div>
+	        <div class="row">
+	        	<i class="plug icon"></i>
+				身份证号：
+	        </div>
+	        <div class="row">
+	        	<i class="plug icon"></i>
+				我的二维码：
+	        </div>
+	        <div class="row">
+	        	<i class="plug icon"></i>
+				常用登陆地址：
+	        </div>
+		</div>
+	</div>
+</template>

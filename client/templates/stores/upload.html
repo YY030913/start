@@ -1,0 +1,105 @@
+<template name="tmp_uploadStoreLicense">
+    <form method="POST" enctype="multipart/form-data">
+
+        <div class="uploadPanel">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+
+            <div class="{{ class 'upload' }}">
+            <!-- jqUploadclass 作为输入-->
+                {{ ut9n 'browse' }}&hellip; <input type="file"
+                                      class="jqUploadclass"
+                                      multiple="{{ multiple }}"
+                                      data-form-data='{{ submitData }}'
+                                      accept="{{ fileTypes }}">
+            </div>
+
+            <div class="{{ class 'progressOuter'}}">
+                <div class="{{ class 'progressInner' }}">
+                    <div class="{{ class 'progressBar' }}"
+                         role="progressbar"
+                         aria-valuemin="0"
+                         aria-valuemax="100" style="{{ progress }}">
+                        &nbsp;
+                    </div>
+                    <div class="progress-label">
+                        {{ infoLabel }}
+                    </div>
+                </div>
+            </div>
+
+            {{> buttons type=type state=buttonState uploadContext=uploadContext autoStart=autoStart}}
+        </div>
+        {{#if showQueue }}
+            <div class="panel panel-default" style="margin-top: 1px; background: #efefef">
+                <div class="panel-body">
+                    {{#each queueItems }}
+                        {{> queueItem type=../type uploadContext=uploadContext item=this }}
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+    </form>
+</template>
+
+
+<template name="tmp_uploadStorePic">
+    <form method="POST" enctype="multipart/form-data">
+
+        <div class="uploadPanel">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+
+            <div class="{{ class 'upload' }}">
+                {{ ut9n 'browse' }}&hellip; <input type="file"
+                                      class="jqUploadclass"
+                                      multiple="{{ multiple }}"
+                                      data-form-data='{{ submitData }}'
+                                      accept="{{ fileTypes }}">
+            </div>
+
+            <div class="{{ class 'progressOuter'}}">
+                <div class="{{ class 'progressInner' }}">
+                    <div class="{{ class 'progressBar' }}"
+                         role="progressbar"
+                         aria-valuemin="0"
+                         aria-valuemax="100" style="{{ progress }}">
+                        &nbsp;
+                    </div>
+                    <div class="progress-label">
+                        {{ infoLabel }}
+                    </div>
+                </div>
+            </div>
+
+            {{> buttons type=type state=buttonState uploadContext=uploadContext autoStart=autoStart}}
+        </div>
+        {{#if showQueue }}
+            <div class="panel panel-default" style="margin-top: 1px; background: #efefef">
+                <div class="panel-body">
+                    {{#each queueItems }}
+                        {{> queueItem type=../type uploadContext=uploadContext item=this }}
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+    </form>
+</template>
+
+
+<template name="uploadedStoreInfo">
+    <div class="documentList">
+        <ul class="list-inline">
+            {{#each this}}
+                <li class="documentItem">
+                    <a href="/upload/{{path}}"><img src="{{src}}" class="ui medium rounded image storeImage" /></a><br/>
+                    <label>{{ name }}</label> <br/>
+                    {{ size }} B<br>
+                    {{#if _id}}
+                        <a class="btn btn-danger deleteUpload">Delete</a>
+                    {{/if}}
+                </li>
+            {{else}}
+                <img class="ui medium rounded image storeImage" src="./assets/images/avatar/nan.jpg">
+            {{/each}}
+        </ul>
+    </div>
+</template>

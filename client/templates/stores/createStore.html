@@ -1,0 +1,132 @@
+<template name="createStore">
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+					</a>
+					<a class="needsclick toc item">HOME</a>
+					{{#if isInRole 'admin' 'web-owner'}}
+					<a class="needsclick item js-new-nav">
+						<span class="icon-plus"></span>
+						New List
+					</a>
+					{{/if}}
+                {{> navsList}}
+					<div class="right item">
+						<a class="ui item"> <i class="search icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui container">
+			<div class="ui left aligned grid">
+				<div class="column">
+					<h1 class="ui dividing header aligned left">Store Information</h1>
+					<div class="ui segment">
+						<form class="ui form">
+
+							<div class="field">
+								<label>Store Name</label>
+								<div class="two fields">
+									<div class="field">
+										<input type="text" name="storeName" placeholder="Store Name"></div>
+								</div>
+							</div>
+							<div class="field">
+								<label>Store Address</label>
+								<div class="fields">
+									<div class="twelve wide field">
+										<input type="text" name="storeAddress" placeholder="Store Address"></div>
+								</div>
+							</div>
+							<div class="two fields">
+								<div class="field">
+									<label>Country</label>
+									<div class="ui fluid search selection dropdown">
+										<input type="hidden" name="country">
+										<i class="dropdown icon"></i>
+										<div class="default text">Select Country</div>
+										<div class="menu">
+											{{#each countryCodes}}
+											<div class="item" data-value="{{countryCode}}">
+												<i class="{{countryCode}} flag"></i>
+												{{countryName}}
+											</div>
+											{{/each}}
+										</div>
+									</div>
+								</div>
+							</div>
+							<h2 class="ui dividing header">About store</h2>
+							<div class="field">
+								<label>Business license:</label>
+								<input type="hidden" name="licensePic"/>
+								<!-- <p>
+								<a class="ui primary button inputLicense" tabindex="0">select license</a>
+								</p>-->
+							{{> tmp_uploadStoreLicense type='semanticUI' fileTypes='image/*' multiple=true}}
+							{{> uploadedStoreInfo uploadStoreLicense }}
+								<!-- {{>
+								uploadStores type='semanticUI' formData=storeFormData fileTypes='image/*' autoStart=autoStart multiple=true}}
+				            {{> uploadedStoreInfo uploadStorePic }} -->
+							</div>
+
+							<div class="field">
+								<label>Store pictures:</label>
+								<input type="hidden" name="storePic"/>
+								<!-- <p>
+								<a class="ui primary button inputStorePic" tabindex="0">select pictures</a>
+								</p>
+								-->
+								<!-- <img class="ui medium rounded image storeImage" src="./assets/images/avatar/nan.jpg">
+								-->
+								{{> tmp_uploadStorePic type='semanticUI' fileTypes='image/*' multiple=true}}
+					            {{> uploadedStoreInfo uploadStorePic }}
+							</div>
+							<div class="ui segment">
+								<div class="field">
+									<div class="ui slider checkbox">
+										<input type="checkbox" name="agreement"/>
+										<label class="checkLabel">
+											agree the
+											<a class="createStoreLicense">license</a>
+											!
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="ui button primary Submit" tabindex="0">Submit Store</div>
+						</form>
+					</div>
+
+					<div class="ui modal">
+						<i class="close icon"></i>
+						<div class="header">create store license</div>
+						<div class="image content">
+							<div class="ui medium image">
+								<img src="./assets/images/avatar/nan.jpg"></div>
+							<div class="description">
+								<div class="ui header">We've auto-chosen a profile image for you.</div>
+								<p>
+									We've grabbed the following image from the
+									<a href="https://www.gravatar.com" target="_blank">gravatar</a>
+									image associated with your registered e-mail address.
+								</p>
+								<p>Is it okay to use this photo?</p>
+							</div>
+						</div>
+						<div class="actions">
+							<div class="ui button primary closeModal">Close</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

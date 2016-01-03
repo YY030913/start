@@ -1,21 +1,108 @@
 <template name="pictures">
-	{{> hello}}
-	{{> list}}
-</template>
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
 
-<template name="hello">
-	<div class="take-photo">
-  		<button class="btn btn-default">take photo</button>
-  	</div>
-</template>
-
-<template name="list">
-  	{{#each pictureLists}}
-  	<div>
-	  	<img data-id={{_id}} class='small-image' src="{{pic}}"/>
-	  	<br/>
-	  	{{time}}
-	   </div>
-  	{{/each}}
-
+			<div class="ui secondary inverted pointing menu">
+				<a class="needsclick toc item"> <i class="sidebar icon"></i>
+				</a>
+				<a class="needsclick toc item">HOME</a>
+				{{#if isInRole 'admin' 'web-owner'}}
+				<a class="needsclick item js-new-nav">
+					<span class="icon-plus"></span>
+					New List
+				</a>
+				{{/if}}
+                    {{> navsList}}
+				<div class="right item">
+					<div class="needsclick item">
+						<div class="ui inverted icon input search"> <i class="search icon"></i>
+							<input type="text" width="100px" placeholder="Search"></div>
+					</div>
+					<div class="needsclick item">
+						<div class="ui floating dropdown icon">
+							<i class="options icon"></i>
+							<div class="menu">
+								<div class="item" data-value="Save Post">
+									<i class="save icon"></i>
+									Save Post
+								</div>
+								<div class="item" data-value="Edit Post">
+									<i class="edit icon"></i>
+									Edit Post
+								</div>
+								<div class="item" data-value="Remove Post">
+									<i class="delete icon"></i>
+									Remove Post
+								</div>
+								<div class="item" data-value="Hide Post">
+									<i class="hide icon"></i>
+									Hide Post
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="needsclick toc item">
+						<div class="ui floating dropdown icon">
+							<i class="options icon"></i>
+							<div class="menu">
+								<div class="item" data-value="Save Post">
+									<i class="save icon"></i>
+									Save Post
+								</div>
+								<div class="item" data-value="Edit Post">
+									<i class="edit icon"></i>
+									Edit Post
+								</div>
+								<div class="item" data-value="Remove Post">
+									<i class="delete icon"></i>
+									Remove Post
+								</div>
+								<div class="item" data-value="Hide Post">
+									<i class="hide icon"></i>
+									Hide Post
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="ui vertical stripe segment">
+	<div class="ui container">
+		<h2 class="ui dividing header">
+			pics
+		</h2>
+		<br/>
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				{{#each pictureLists}}
+				<div class="ui container">
+					<div class="ui relaxed divided items">
+						<div class="item">
+							<div class="ui small image">
+								<img data-id={{_id}} class='small-image' src="{{pic}}"/>
+							</div>
+							<div class="content">
+								<a class="header">Content Header</a>
+								<div class="meta">
+									<a>{{time}}</a>
+									<a>Category</a>
+								</div>
+								<div class="description">{{exif pic}}</div>
+								<div class="extra">
+									<img src="assets/images/wireframe/square-image.png" class="ui circular avatar image">Username</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{else}}
+					not found
+				{{/each}}
+				<div class="map-container">{{> googleMap name="exampleMap" options=exampleMapOptions}}</div>
+			</div>
+		</div>
+	</div>
+</div>
 </template>

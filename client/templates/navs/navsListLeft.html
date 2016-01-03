@@ -1,0 +1,5 @@
+<template name="navsListLeft">
+	{{#each navsList}}
+		<a href="{{name}}" class="needsclick item {{activeNavClass name}}" title="{{name}}">{{name}}</a>
+	{{/each}}
+</template>

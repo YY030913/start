@@ -7,7 +7,6 @@
 meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 mongo                   # The database Meteor supports right now
-blaze-html-templates    # Compile .html files into Meteor Blaze views
 session                 # Client-side reactive dictionary for your app
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
@@ -20,20 +19,17 @@ insecure                # Allow all DB writes from clients (for prototyping)
 mdg:camera
 coffeescript
 iron:router
-semantic:ui
 less
 tap:i18n
 accounts-password
 alanning:roles
 mdg:geolocation
-3stack:country-codes
 harrison:papa-parse
 cfs:filesystem
 meteorhacks:npm
 
 
 cfs:standard-packages
-aldeed:autoform
 tomi:upload-server
 tomi:upload-jquery
 
@@ -43,14 +39,19 @@ check
 mpowaga:jquery-fileupload
 dburles:google-maps
 heron88:exif
-pcel:loading
-angularutils:pagination
 leonzhang1109:accounts-wechat
 service-configuration
 google
 jaymc:google-reverse-geocode
 underscore
-cwaring:modernizr
-http
 ejson
 risul:chance
+blaze-html-templates
+dandv:http-more
+emgee:libphonenumber
+meteorhacks:ssr
+accounts-google
+accounts-base
+accounts-weibo
+momentjs:moment
+reywood:publish-composite

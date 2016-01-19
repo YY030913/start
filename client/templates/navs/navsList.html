@@ -1,0 +1,15 @@
+<template name="navsList">
+{{#each navsList}}
+    <!-- {{#if isInRole 'admin' 'web-owner'}}
+    <li class="{{activeNavClass href}}">
+		<a href="{{href}}">
+			<h3><input type="text" value="{{name}}" /></h3>
+		</a>
+	</li>       
+	{{else}} -->
+	<li class="{{activeNavClass href}}">
+		<a href="{{href}}">{{name}}</a>
+	</li>
+	<!-- {{/if}} -->
+{{/each}}
+</template>

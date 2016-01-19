@@ -1,0 +1,11 @@
+<template name="navsList1">
+{{#each navsList}}
+    {{#if isInRole 'admin' 'web-owner'}}
+	<a class="needsclick item"> <i class="remove circle outline icon"></i>
+	</a>
+	<input type="text" name="name" value="{{name}}" style="background-color:transparent;border: none;border-radius: 0;"/>            
+	{{else}}
+	<a href="{{name}}" class="item {{activeNavClass name}} needsclick" title="{{name}}">{{name}}</a>
+	{{/if}}
+{{/each}}
+</template>

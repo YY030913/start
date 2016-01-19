@@ -1,0 +1,21 @@
+<template name="createpost">
+{{count}}
+<input class="post-title-search" name="post-title" id="post-title" placeholder="Enter your post title" 
+value="{{post_title}}" />
+<section>
+	<ul class="posts">
+	{{#each post_search_list}}
+		<li>
+			<article>
+				<header>
+					<h3><a href="post/{{_id}}">{{post_title}}</a></h3>
+					<time class="published" datetime="2015-10-20">{{time}}</time>
+				</header>
+				<a href="post/{{_id}}" class="image"><img src="images/pic08.jpg" alt="" /></a>
+			</article>
+		</li>
+	{{/each}}
+	</ul>
+</section>
+
+</template>

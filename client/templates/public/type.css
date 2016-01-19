@@ -1,0 +1,228 @@
+/* Type */
+
+body, input, select, textarea {
+	color: #646464;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: 400;
+	line-height: 1.75;
+	/*color: #414f57;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;*/
+}
+
+@media screen and (max-width: 1680px) {
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+}
+
+a {
+	-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+	-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+	-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+	transition: color 0.2s ease, border-bottom-color 0.2s ease;
+	border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+	color: inherit;
+	text-decoration: none;
+}
+
+a:before {
+	-moz-transition: color 0.2s ease;
+	-webkit-transition: color 0.2s ease;
+	-ms-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: #2ebaae !important;
+}
+
+a:hover:before {
+	color: #2ebaae !important;
+}
+
+strong, b {
+	color: #3c3b3b;
+	font-weight: 700;
+}
+
+/*a:before {
+	-moz-transition: color 0.2s ease, text-shadow 0.2s ease;
+	-webkit-transition: color 0.2s ease, text-shadow 0.2s ease;
+	-ms-transition: color 0.2s ease, text-shadow 0.2s ease;
+	transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+	color: #ff7496;
+}
+
+strong, b {
+	color: #313f47;
+}*/
+
+em, i {
+	font-style: italic;
+}
+
+p {
+	margin: 0 0 2em 0;
+}
+
+/*p {
+	margin: 0 0 1.5em 0;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #3c3b3b;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 800;
+	letter-spacing: 0.25em;
+	/*line-height: 1.65;*/
+	/*margin: 0 0 1em 0;*/
+	text-transform: uppercase;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: inherit;
+	border-bottom: 0;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.85em;
+	letter-spacing: 0.22em;
+	margin: 0 0 0.525em 0;
+}
+
+@media screen and (max-width: 480px) {
+
+	h1 {
+		font-size: 1.65em;
+	}
+
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
+h3 {
+	font-size: 0.9em;
+}
+
+h4 {
+	font-size: 0.7em;
+}
+
+h5 {
+	font-size: 0.7em;
+}
+
+h6 {
+	font-size: 0.7em;
+}
+
+sub {
+	font-size: 0.8em;
+	position: relative;
+	top: 0.5em;
+}
+
+sup {
+	font-size: 0.8em;
+	position: relative;
+	top: -0.5em;
+}
+
+blockquote {
+	border-left: solid 4px rgba(160, 160, 160, 0.3);
+	font-style: italic;
+	margin: 0 0 2em 0;
+	padding: 0.5em 0 0.5em 2em;
+}
+
+code {
+	background: rgba(160, 160, 160, 0.075);
+	border: solid 1px rgba(160, 160, 160, 0.3);
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	margin: 0 0.25em;
+	padding: 0.25em 0.65em;
+}
+
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	margin: 0 0 2em 0;
+}
+
+pre code {
+	display: block;
+	line-height: 1.75em;
+	padding: 1em 1.5em;
+	overflow-x: auto;
+}
+
+hr {
+	border: 0;
+	border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+	margin: 2em 0;
+}
+
+hr.major {
+	margin: 3em 0;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}

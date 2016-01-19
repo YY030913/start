@@ -1,81 +1,82 @@
 <template name="user">
-	<!-- header -->
-	<div class="following bar">
-		<div class="ui inverted vertical masthead center aligned segment">
-			<div class="ui container">
-				<div class="ui large secondary inverted pointing menu">
-					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+	<div class="row show-grid" style="width:100%">
+		
+		<div class="col-xs-4">
+			<span class="image fit"><img src="{{user.profile.avator}}" alt="" /></span>
+		</div>
+		<div class="col-xs-8">
+			<header>
+				<h1>
+				{{#if edit}}
+					<input type="text" id="userName" value="{{user.profile.name}}" />
+				{{else}}
+					<strong id="userName">
+						{{user.profile.name}}
+					</strong>
+				{{/if}}
+				</h1>
+			</header>
+			{{#if edit}}
+				<input type="text" id="aboutMe" value="{{user.profile.aboutMe}}" />
+			{{else}}
+				<p id="aboutMe">
+					{{user.profile.aboutMe}}
+				</p>
+			{{/if}}
+			<br/>
+			{{#if edit}}
+			{{else}}
+				
+				{{#if follower}}
+					<a class="button big scrolly follow" data-follower="{{follower._id}}">
+						已关注
 					</a>
-					<a class="needsclick toc item">HOME</a>
-					{{#if isInRole 'admin' 'web-owner'}}
-					<a class="needsclick item js-new-nav">
-						<span class="icon-plus"></span>
-						New List
+				{{else}}
+					<a class="button big scrolly follow">
+						关注我
 					</a>
-					{{/if}}
-                {{> navsList}}
-					<div class="right item">
-						<a class="ui item"> <i class="search icon"></i>
-						</a>
-					</div>
-				</div>
-			</div>
+				{{/if}}
+				
+			{{/if}}
+		</div>
+		<div class="col-xs-12">
+			<hr />
+		</div>
+		
+	</div>
+	
+	<div class="row show-grid" style="width:100%">
+		<div class="col-xs-12">
+			<a>
+				<section class="box style1">
+					<span class="icon featured fa-comments-o">讨论</span>
+				</section>
+			</a>
+		</div>
+		
+		<!-- <div class="col-xs-4">
+			<section class="box style1">
+				<span class="icon featured fa-camera-retro">图片</span>
+			</section>
+		</div>
+		<div class="col-xs-4">
+			<section class="box style1">
+				<span class="icon featured fa-thumbs-o-up">赞</span>
+			</section>
+		</div> -->
+	</div>
+	<div class="row show-grid" style="width:100%">
+		<div class="col-xs-12">
+			<ul class="social">
+				{{#if user.profile.googleId}}
+				<li><a href="https://plus.google.com/{{user.profile.googleId}}" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+				{{/if}}
+				{{#if user.profile.weiboId}}
+				<li><a href="weibo.com/u/{{user.profile.weiboId}}" class="icon fa-weibo"><span class="label">weibo</span></a></li>
+				{{/if}}
+			</ul>
+			<hr />
 		</div>
 	</div>
 
-	<div class="ui vertical stripe segment">
-		<div class="stackable very relaxed ui grid container">
-			<div class="row">
-				<div class="seven wide column">
-					<h1 class="ui header aligned left">firends</h1>
-				</div>
-				<div class="nine wide column">
-					<div class="ui three buttons">
-						<button class="ui active button">One</button>
-						<button class="ui button">Two</button>
-						<button class="ui button">Three</button>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="nine wide column">
-					<i class="right chevron icon"></i>
-					<h1 class="ui header">头像</h1>
-				</div>
-				<div class="seven wide column">
-					<div class="eight wide column">
-						<img src="/images/Meteor-logo.png" class="ui circular image">
-						<i class="chevron icon"></i>
-	        		</div>
-	        	</div>
-	        </div>
-
-	        <div class="row">
-	        	<i class="plug icon"></i>
-				姓名：
-	        </div>
-
-	        <div class="row">
-	        	<i class="plug icon"></i>
-				性别：
-	        </div>
-
-	        <div class="row">
-				<i class="plug icon"></i>
-				出生日期：
-	        </div>
-	        <div class="row">
-	        	<i class="plug icon"></i>
-				身份证号：
-	        </div>
-	        <div class="row">
-	        	<i class="plug icon"></i>
-				我的二维码：
-	        </div>
-	        <div class="row">
-	        	<i class="plug icon"></i>
-				常用登陆地址：
-	        </div>
-		</div>
-	</div>
 </template>

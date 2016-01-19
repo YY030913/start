@@ -1,0 +1,52 @@
+<template name="post">
+
+	<h1 class="major">{{post.postTitle}}</h1>
+	<p>{{{unescape post.postContent}}}</p>
+
+	<div class="options">
+		<ul>
+			<li>
+				<a class="positive">{{post.postPositive}}</a>
+			</li>
+			<li>
+				<a class="negative">{{post.postNegative}}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="chat-box">
+		<div class="people-on-chat">
+			{{#each debates}}
+				{{#if postive option}}
+					<div class="chat-msg">
+						<div class="col-xs-2 chat-people">
+							<a href="{{pathFor route='user' _id=accountId}}">
+								<img src="{{account.profile.avator}}" class="avator" title="name" />
+							</a>
+						</div>
+						<div class="col-xs-9 chat-msg-on">
+							<p>{{unescape debateContent}}</p>
+							<span></span>
+						</div>
+						<div class="clear"></div>
+					</div>
+				{{else}}
+			
+					<div class="chat-msg">
+						<div class="col-xs-9 chat-msg-on chat-msg-replay">
+							<p>{{debateContent}}</p>
+							<span></span>
+						</div>
+						<div class="col-xs-2 chat-people">
+							<a href="{{pathFor route='user' _id=accountId}}">
+								<img src="{{account.profile.avator}}" class="avator" title="name" />
+							</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				{{/if}}
+			{{/each}}
+		</div>
+	</div>
+
+</template>

@@ -1,0 +1,72 @@
+<template name="stores1">
+	<!-- header -->
+	<div class="following bar">
+		<div class="ui inverted vertical masthead center aligned segment">
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="needsclick toc item"> <i class="sidebar icon"></i>
+					</a>
+					<a class="needsclick toc item">HOME</a>
+					{{#if isInRole 'admin' 'web-owner'}}
+					<a class="needsclick item js-new-nav">
+						<span class="icon-plus"></span>
+						New List
+					</a>
+					{{/if}}
+                {{> navsList}}
+					<div class="right item">
+						<a class="ui item"> <i class="search icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui container">
+			<h2 class="ui dividing header">Stores</h2>
+			<div class="ui middle aligned stackable grid container">
+				<div class="row">
+					{{#each stores}}
+					<section>
+						<div class="mini-posts">
+
+							<!-- Mini Post -->
+								<article class="mini-post">
+									<header>
+										<h3><a href="#">Vitae sed condimentum</a></h3>
+										<time class="published" datetime="2015-10-20">October 20, 2015</time>
+										<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+									</header>
+									<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+								</article>
+							
+
+						</div>
+					</section>
+				
+					<section>
+						<div class="mini-posts">
+
+							<!-- Mini Post -->
+								<article class="mini-post">
+									<header>
+										<h3><a href="#">Vitae sed condimentum</a></h3>
+										<time class="published" datetime="2015-10-20">October 20, 2015</time>
+										<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+									</header>
+									<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+								</article>
+							
+
+						</div>
+					</section>
+					{{else}}
+						no stores found
+				{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

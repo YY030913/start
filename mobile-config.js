@@ -1,9 +1,9 @@
 App.info({
-  name: 'start',
-  description: 'A simple todo list app built in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
+  name: 'wuwang',
+  description: 'A simple debate app built in Meteor.',
+  author: '肖雨',
+  email: 'a15102902812@gmail.com',
+  website: 'http://wenode.aliapp.com',
   version: '0.0.1'
 });
 

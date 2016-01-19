@@ -1,0 +1,100 @@
+/* lens-main */
+
+	#lens-main {
+		-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-webkit-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-ms-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-webkit-overflow-scrolling: touch;
+		position: fixed;
+		top: 0;
+		width: 22.5em;
+		height: 100%;
+		background: #fff;
+		outline: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: right;
+		visibility: visible;
+		z-index: 10000;
+		right: 0;
+	}
+
+		#lens-main .toggle {
+			-webkit-tap-highlight-color: transparent;
+			position: absolute;
+			top: 0;
+			width: 4em;
+			height: 4em;
+			background-image: url("images/close-small-alt.svg");
+			background-repeat: no-repeat;
+			background-size: 32px 32px;
+			cursor: pointer;
+			display: none;
+			z-index: 1;
+			background-position: 0.5em 0.5em;
+			left: 0;
+		}
+
+		body.fullscreen #lens-main {
+			visibility: hidden;
+			right: -22.5em;
+		}
+
+		body.is-loading-1 #lens-main {
+			opacity: 0;
+			right: -2em;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#lens-main {
+				width: 19em;
+			}
+
+				body.fullscreen #lens-main {
+					right: -19em;
+				}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#lens-main {
+				background: rgba(255, 255, 255, 0.925);
+			}
+
+				#lens-main .toggle {
+					display: block;
+				}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#lens-main {
+				-moz-transition: opacity 0.5s ease, visibility 0.5s;
+				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
+				-ms-transition: opacity 0.5s ease, visibility 0.5s;
+				transition: opacity 0.5s ease, visibility 0.5s;
+				width: 100%;
+				background: #fff;
+				text-align: center;
+			}
+
+				body.is-loading-1 #lens-main {
+					left: auto !important;
+					right: auto !important;
+				}
+
+				body.fullscreen #lens-main {
+					left: auto !important;
+					right: auto !important;
+					opacity: 0;
+				}
+
+				#lens-main .toggle {
+					display: none;
+				}
+
+		}

@@ -1,0 +1,38 @@
+/* signup-Header */
+	#signup-header {
+		z-index: 2;
+	}
+
+	#signup-header h1 {
+		font-size: 3.25em;
+		margin: 0 0 0.55em 0;
+	}
+
+	#signup-header p {
+		font-size: 1.35em;
+		line-height: 1.65em;
+	}
+
+	#signup-header a {
+		color: inherit;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#signup-header h1 {
+			font-size: 2em;
+		}
+
+		#signup-header p {
+			font-size: 1em;
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#signup-header {
+			margin: 0 0 1em 0;
+		}
+
+	}

@@ -1,0 +1,87 @@
+<template name="register1">
+    <!-- header -->
+    <div class="following bar">
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="needsclick toc item"> <i class="sidebar icon"></i>
+                    </a>
+                    <a class="needsclick toc item">HOME</a>
+                    {{#if isInRole 'admin' 'web-owner'}}
+                    <a class="needsclick item js-new-nav">
+                        <span class="icon-plus"></span>
+                        New List
+                    </a>
+                    {{/if}}
+                {{> navsList}}
+                    <div class="right item">
+                        <a class="ui item"> <i class="search icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical stripe segment">
+        <div class="stackable very relaxed ui grid container">
+            <div class="row">
+                <div class="six wide column">
+                    <h2 class="ui teal image header">
+                        <img src="assets/images/logo.png" class="image">
+                        <div class="content">signup your account</div>
+                    </h2>
+                    <form class="ui large form">
+                        <div class="ui right labeled input">
+                            <input name="phone" placeholder="input phone num" type="tel" class="width10" maxlength="11">
+
+                            <div class="ui dropdown label needsclick">
+                                <div class="text">Select Country</div> <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    {{#each countrys}}
+                                    <div class="item" value-data="{{code}}">{{country}}</div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui right labeled left icon input"> <i class="tags icon"></i>
+                        <input name="verification" placeholder="Enter verification code" type="text" class="width10" maxlength="4">
+
+                        <a class="ui tag label getVerificationCode">获取验证码</a>
+                        </div>
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input name="password" class="width18" type="password" placeholder="Password">
+                        </div>
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input name="confirm" class="width18" type="password" placeholder="Confirme Password">
+                        </div>
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input class="width18" name="userID" type="text" placeholder="input ID Num">
+                        </div>
+
+                        <div class="ui divider"></div>
+                        
+                        <div class="ui fluid large teal submit button">SignUP</div>
+
+                        <div class="ui error message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

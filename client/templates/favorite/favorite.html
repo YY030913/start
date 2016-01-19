@@ -1,0 +1,39 @@
+<template name="favorite">
+
+	<!-- Main -->
+	<div id="main">
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<h3>我の收藏</h3>
+			<!-- Mini Posts -->
+			<section>
+				<div class="mini-posts">
+
+					{{#each favorite}}
+					<!-- Mini Post -->
+					<article class="mini-post">
+						<header>
+							<h3>
+								<a href="post/{{postId}}">{{favoritePosts.postTitle}}</a>
+							</h3>
+							<time class="published" datetime="{{momentFormate favoritePosts.time}}">{{momentFormate favoritePosts.time}}</time>
+							<a href="user/{{favoritePosts._accountId}}" class="author">
+								{{postAuthor.profile.name}}
+								<img src="{{postAuthor.profile.avator}}" alt="" />
+							</a>
+						</header>
+						<a href="{{pathFor route='post' _id=postId}}" class="image">
+							<img src="{{favoritePosts.postImg}}" alt="" />
+						</a>
+					</article>
+					{{else}}
+						暂无收藏
+					{{/each}}
+
+				</div>
+			</section>
+
+		</section>
+	</div>
+
+</template>

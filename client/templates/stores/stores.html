@@ -1,52 +1,147 @@
 <template name="stores">
-	<!-- header -->
-	<div class="following bar">
-		<div class="ui inverted vertical masthead center aligned segment">
-			<div class="ui container">
-				<div class="ui large secondary inverted pointing menu">
-					<a class="needsclick toc item"> <i class="sidebar icon"></i>
-					</a>
-					<a class="needsclick toc item">HOME</a>
-					{{#if isInRole 'admin' 'web-owner'}}
-					<a class="needsclick item js-new-nav">
-						<span class="icon-plus"></span>
-						New List
-					</a>
-					{{/if}}
-                {{> navsList}}
-					<div class="right item">
-						<a class="ui item"> <i class="search icon"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		
+	<ul class="columns-content page-content testimonial-full clearfix">
+		
+		<!-- BEGIN .col-main -->
+		<li class="col-main">
+			
+			<h2 class="page-title">Products</h2>
 
-	<div class="ui vertical stripe segment">
-		<div class="ui container">
-			<h2 class="ui dividing header">Stores</h2>
-			<div class="ui middle aligned stackable grid container">
-				<div class="row">
-					{{#each stores}}
-					<div class="header">
-						<img src="./assets/images/wireframe/square-image.png" class="ui avatar right spaced image">{{storeName}}</div>
-					<div class="description">
-						<img src="./assets/images/wireframe/paragraph.png" class="ui wireframe image"></div>
-					<div class="ui four column doubling stackable grid container">
-						{{#each storePictures _id}}
-						<div class="column">
-							<p></p>
-							<img src="{{pic}}"/>
-							<p></p>
-						</div>
-						{{/each}}
-					</div>
-					{{else}}
-						no stores found
-				{{/each}}
-				</div>
+				<ul class="columns-3 clearfix product-list">
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image1.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image2.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image3.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image4.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image1.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image2.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image3.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image4.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+					<li class="col3">
+						<a href="product-single.html"><img src="images/image1.jpg" alt="" class="full-image product-image" /></a>
+						<p class="product-title"><a href="product-single.html">Seaweed Soap</a></p>
+						<p class="product-price">£14.99</p>
+						<p class="product-button clearfix"><a href="cart.html" class="button2">Add to Cart &raquo;</a></p>
+					</li>
+				</ul>
+		
+		<!-- END .col-main -->
+		</li>
+		
+		<!-- BEGIN .col-sidebar -->
+		<li class="col-sidebar">
+		
+			<div class="widget">
+				<div class="widget-title clearfix"><h4 class="tag-title">Categories</h4></div>
+				<ul>
+					<li><a href="#">Skin Care</a></li>
+					<li><a href="#">Bath &amp; Body Care</a></li>
+					<li><a href="#">Fragrance</a></li>
+					<li><a href="#">Make-Up</a></li>
+					<li><a href="#">Hair</a></li>
+					<li><a href="#">Moisturisers</a></li>
+				</ul>
 			</div>
-		</div>
-	</div>
+			
+			<div class="widget">
+				<div class="widget-title clearfix"><h4 class="tag-title">Tags</h4></div>
+				<ul class="wp-tag-cloud clearfix">
+					<li><a href="#">Tag #1</a></li>
+					<li><a href="#">Tag #2</a></li>
+					<li><a href="#">Tag #3</a></li>
+					<li><a href="#">Tag #4</a></li>
+					<li><a href="#">Tag #5</a></li>
+					<li><a href="#">Tag #6</a></li>
+				</ul>
+			</div>
+			
+			<div class="widget">
+				<div class="widget-title clearfix"><h4 class="tag-title">Recent Posts</h4></div>
+				
+				<ul class="latest-posts-list clearfix">
+					
+					<li class="clearfix">
+						<div class="lpl-img">
+							<a href="blog-single.html" rel="bookmark">
+								<img width="66" height="66" src="images/blog-thumb1.jpg" alt="" />
+							</a>
+						</div>
+						<div class="lpl-content">
+							<h6><a href="blog-single.html" rel="bookmark">Dasellus ac nibh urna donec 
+							ac urna</a> <span> Posted Jun 13, 2012 By admin</span></h6>
+						</div>
+					</li>
+					
+					<li class="clearfix">
+						<div class="lpl-img">
+							<a href="blog-single.html" rel="bookmark">
+								<img width="66" height="66" src="images/blog-thumb2.jpg" alt="" />
+							</a>
+						</div>
+						<div class="lpl-content">
+							<h6><a href="blog-single.html" rel="bookmark">Dasellus ac nibh urna donec 
+							ac urna</a> <span> Posted Jun 13, 2012 By admin</span></h6>
+						</div>
+					</li>
+					
+					<li class="clearfix">
+						<div class="lpl-img">
+							<a href="blog-single.html" rel="bookmark">
+								<img width="66" height="66" src="images/blog-thumb3.jpg" alt="" />
+							</a>
+						</div>
+						<div class="lpl-content">
+							<h6><a href="blog-single.html" rel="bookmark">Dasellus ac nibh urna donec 
+							ac urna</a> <span> Posted Jun 13, 2012 By admin</span></h6>
+						</div>
+					</li>
+					
+				</ul>
+			
+			</div>
+			
+		<!-- END .col-sidebar -->
+		</li>
+		
+	</ul>
+
 </template>

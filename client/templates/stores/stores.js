@@ -1,22 +1,34 @@
 Template.stores.onRendered(function() {
-    $('.ui.sidebar').sidebar('attach events', '.sidebar.icon');
-    this.find('#stores-container')._uihooks = {
-        insertElement: function(node, next) {
-            $(node)
-                .hide()
-                .insertBefore(next)
-                .fadeIn(function() {
-                    if (listFadeInHold) {  
-                        listFadeInHold.release();
-                    }
-                });
-        },
-        removeElement: function(node) {
-            $(node).fadeOut(function() {
-                $(this).remove();
-            });
-        }
-    };
+    // $('.ui.sidebar').sidebar('attach events', '.sidebar.icon');
+    // this.find('#stores-container')._uihooks = {
+    //     insertElement: function(node, next) {
+    //         $(node)
+    //             .hide()
+    //             .insertBefore(next)
+    //             .fadeIn(function() {
+    //                 if (listFadeInHold) {  
+    //                     listFadeInHold.release();
+    //                 }
+    //             });
+    //     },
+    //     removeElement: function(node) {
+    //         $(node).fadeOut(function() {
+    //             $(this).remove();
+    //         });
+    //     }
+    // };
+
+    // Intro.
+    // var $intro = $('#intro');
+
+    // Move to main on <=large, back to sidebar on >large.
+    // skel
+    //     .on('+large', function() {
+    //         $intro.prependTo($main);
+    //     })
+    //     .on('-large', function() {
+    //         $intro.prependTo($sidebar);
+    //     });
 });
 
 Template.stores.helpers({

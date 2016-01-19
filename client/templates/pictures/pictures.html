@@ -1,108 +1,91 @@
 <template name="pictures">
-	<!-- header -->
-	<div class="following bar">
-		<div class="ui inverted vertical masthead center aligned segment">
 
-			<div class="ui secondary inverted pointing menu">
-				<a class="needsclick toc item"> <i class="sidebar icon"></i>
-				</a>
-				<a class="needsclick toc item">HOME</a>
-				{{#if isInRole 'admin' 'web-owner'}}
-				<a class="needsclick item js-new-nav">
-					<span class="icon-plus"></span>
-					New List
-				</a>
-				{{/if}}
-                    {{> navsList}}
-				<div class="right item">
-					<div class="needsclick item">
-						<div class="ui inverted icon input search"> <i class="search icon"></i>
-							<input type="text" width="100px" placeholder="Search"></div>
-					</div>
-					<div class="needsclick item">
-						<div class="ui floating dropdown icon">
-							<i class="options icon"></i>
-							<div class="menu">
-								<div class="item" data-value="Save Post">
-									<i class="save icon"></i>
-									Save Post
-								</div>
-								<div class="item" data-value="Edit Post">
-									<i class="edit icon"></i>
-									Edit Post
-								</div>
-								<div class="item" data-value="Remove Post">
-									<i class="delete icon"></i>
-									Remove Post
-								</div>
-								<div class="item" data-value="Hide Post">
-									<i class="hide icon"></i>
-									Hide Post
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="needsclick toc item">
-						<div class="ui floating dropdown icon">
-							<i class="options icon"></i>
-							<div class="menu">
-								<div class="item" data-value="Save Post">
-									<i class="save icon"></i>
-									Save Post
-								</div>
-								<div class="item" data-value="Edit Post">
-									<i class="edit icon"></i>
-									Edit Post
-								</div>
-								<div class="item" data-value="Remove Post">
-									<i class="delete icon"></i>
-									Remove Post
-								</div>
-								<div class="item" data-value="Hide Post">
-									<i class="hide icon"></i>
-									Hide Post
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="ui vertical stripe segment">
-	<div class="ui container">
-		<h2 class="ui dividing header">
-			pics
-		</h2>
-		<br/>
-		<div class="ui middle aligned stackable grid container">
-			<div class="row">
-				{{#each pictureLists}}
-				<div class="ui container">
-					<div class="ui relaxed divided items">
-						<div class="item">
-							<div class="ui small image">
-								<img data-id={{_id}} class='small-image' src="{{pic}}"/>
-							</div>
-							<div class="content">
-								<a class="header">Content Header</a>
-								<div class="meta">
-									<a>{{time}}</a>
-									<a>Category</a>
-								</div>
-								<div class="description">{{exif pic}}</div>
-								<div class="extra">
-									<img src="assets/images/wireframe/square-image.png" class="ui circular avatar image">Username</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				{{else}}
-					not found
-				{{/each}}
-				<div class="map-container">{{> googleMap name="exampleMap" options=exampleMapOptions}}</div>
-			</div>
-		</div>
-	</div>
+<div id="lens-main">
+
+	<!-- lens-Header -->
+		<header id="lens-header">
+			<h1>Lens</h1>
+			<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+			</ul>
+		</header>
+
+	<!-- Thumbnail -->
+		<section id="thumbnails">
+			<article>
+				<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
+				<h2>Diam tempus accumsan</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
+				<h2>Vivamus convallis libero</h2>
+				<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
+				<h2>Nec accumsan enim felis</h2>
+				<p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
+				<h2>Donec maximus nisi eget</h2>
+				<p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
+				<h2>Nullam vitae nunc vulputate</h2>
+				<p>In pellentesque cursus velit id posuere. Donec vehicula nulla.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
+				<h2>Phasellus magna faucibus</h2>
+				<p>Nulla dignissim libero maximus tellus varius dictum ut posuere magna.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
+				<h2>Proin quis mauris</h2>
+				<p>Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
+				<h2>Gravida quis varius enim</h2>
+				<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
+				<h2>Morbi eget vitae adipiscing</h2>
+				<p>In quis vulputate dui. Maecenas metus elit, dictum praesent lacinia lacus.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
+				<h2>Habitant tristique senectus</h2>
+				<p>Vestibulum ante ipsum primis in faucibus orci luctus ac tincidunt dolor.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/11.jpg"><img src="images/thumbs/11.jpg" alt="" /></a>
+				<h2>Pharetra ex non faucibus</h2>
+				<p>Ut sed magna euismod leo laoreet congue. Fusce congue enim ultricies.</p>
+			</article>
+			<article>
+				<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
+				<h2>Mattis lorem sodales</h2>
+				<p>Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.</p>
+			</article>
+		</section>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<ul class="copyright">
+				<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
+
 </div>
+
+<div id="viewer"><div class="inner"><div class="nav-next"></div><div class="nav-previous"></div><div class="toggle"></div></div><div class="slide active"><div class="caption"><h2>Donec maximus nisi eget</h2><p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p></div><div class="image" style="background-image: url(file:///Users/apple/Downloads/html5up-lens/images/fulls/04.jpg); background-position: 50% 50%;"></div></div></div>
 </template>

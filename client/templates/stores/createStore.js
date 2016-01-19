@@ -1,5 +1,5 @@
-Template.createStore.events({
-    'click .createStoreLicense': function() {
+Template.createstore.events({
+    'click .createstoreLicense': function() {
         $('.ui.modal').modal('show');
     },
     'click .inputLicense': function() {
@@ -11,9 +11,9 @@ Template.createStore.events({
     // 'click input[name="agreement"])':function() {
     //     console.log($('input[name="agreement"]').attr("checked"));
     //     if ($('input[name="agreement"]').attr("checked")) {
-    //         $(".checkLabel").html("don't agree the <a class='createStoreLicense'>license</a>!");
+    //         $(".checkLabel").html("don't agree the <a class='createstoreLicense'>license</a>!");
     //     } else {
-    //         $(".checkLabel").html("agree the <a class='createStoreLicense'>license</a>!");
+    //         $(".checkLabel").html("agree the <a class='createstoreLicense'>license</a>!");
     //     }
     // },
     'click .submit': function() {
@@ -77,7 +77,7 @@ Template.createStore.events({
     }
 });
 
-Template.createStore.helpers({
+Template.createstore.helpers({
     countryCodes: function() {
         // var lis = CountryCodes.getList();
         // _.each(lis, function(data) {
@@ -113,7 +113,7 @@ Template.createStore.helpers({
 });
 
 
-Template.createStore.onRendered(function() {
+Template.createstore.onRendered(function() {
 	$('.masthead').visibility({
         once: false,
         onBottomPassed: function() {

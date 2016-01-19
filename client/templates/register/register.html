@@ -1,87 +1,44 @@
 <template name="register">
-    <!-- header -->
-    <div class="following bar">
-        <div class="ui inverted vertical masthead center aligned segment">
-            <div class="ui container">
-                <div class="ui large secondary inverted pointing menu">
-                    <a class="needsclick toc item"> <i class="sidebar icon"></i>
-                    </a>
-                    <a class="needsclick toc item">HOME</a>
-                    {{#if isInRole 'admin' 'web-owner'}}
-                    <a class="needsclick item js-new-nav">
-                        <span class="icon-plus"></span>
-                        New List
-                    </a>
-                    {{/if}}
-                {{> navsList}}
-                    <div class="right item">
-                        <a class="ui item"> <i class="search icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="ui vertical stripe segment">
-        <div class="stackable very relaxed ui grid container">
-            <div class="row">
-                <div class="six wide column">
-                    <h2 class="ui teal image header">
-                        <img src="assets/images/logo.png" class="image">
-                        <div class="content">signup your account</div>
-                    </h2>
-                    <form class="ui large form">
-                        <div class="ui right labeled input">
-                            <input name="phone" placeholder="input phone num" type="tel" class="width10" maxlength="11">
+<!-- Header -->
+	<div id="signup-header">
+		<h1>手机号码注册</h1>
+		<!-- <p>A simple template for telling the world when you'll launch<br />
+		your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p> -->
+	</div>
 
-                            <div class="ui dropdown label needsclick">
-                                <div class="text">Select Country</div> <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    {{#each countrys}}
-                                    <div class="item" value-data="{{code}}">{{country}}</div>
-                                    {{/each}}
-                                </div>
-                            </div>
-                        </div>
+<!-- Signup Form -->
+	<form id="signup-form" method="post">
+		
+		<div class="signup-flex">
+			<input type="text" name="phone" id="phone" placeholder="Telephone Number" />
+			<input class="eventually-button" type="button" style="" value="获取验证码" />
+		</div>
+		<div>
+			<ul>
+				<li class="signup-extends">
+					<input type="text" name="verification" id="verification" placeholder="Input The Verification Code" />
+				</li>
+				<li class="signup-extends">
+					<input type="password" name="password" id="password" placeholder="Input The password" />
+				</li>
+				<li class="signup-extends">
+					<input class="eventually-button" type="submit" value="Sign Up" />
+				</li>
+			</ul>
+		</div>
+	</form>
 
-                        <div class="ui divider"></div>
-
-                        <div class="ui right labeled left icon input"> <i class="tags icon"></i>
-                        <input name="verification" placeholder="Enter verification code" type="text" class="width10" maxlength="4">
-
-                        <a class="ui tag label getVerificationCode">获取验证码</a>
-                        </div>
-
-                        <div class="ui divider"></div>
-
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input name="password" class="width18" type="password" placeholder="Password">
-                        </div>
-
-                        <div class="ui divider"></div>
-
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input name="confirm" class="width18" type="password" placeholder="Confirme Password">
-                        </div>
-
-                        <div class="ui divider"></div>
-
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input class="width18" name="userID" type="text" placeholder="input ID Num">
-                        </div>
-
-                        <div class="ui divider"></div>
-                        
-                        <div class="ui fluid large teal submit button">SignUP</div>
-
-                        <div class="ui error message"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Footer -->
+	<!-- <footer id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+			<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</footer> -->
 </template>

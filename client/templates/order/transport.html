@@ -1,0 +1,152 @@
+<template name="transport">
+	<div class="section page-content clearfix">
+		
+		<h2 class="page-title">Checkout</h2>
+
+		<div class="msg notice"><p>Already have an account? <a href="#">Login now</a></p></div>
+		
+		<form method="post" action="#" >
+		
+			<ul class="columns-2 checkout-form clearfix">
+				<li class="col2 clearfix">
+				
+					<div class="tag-title-wrap clearfix">
+						<h4 class="tag-title">Billing Addresses</h4>
+					</div>
+				
+					<input class="half-input fl" type="text" name="first-name" onblur="if(this.value=='')this.value='First name';" onfocus="if(this.value=='First name')this.value='';" value="First name" />
+					<input class="half-input fr" type="text" name="last-name" onblur="if(this.value=='')this.value='Last name';" onfocus="if(this.value=='Last name')this.value='';" value="Last name" />
+				
+					<input class="full-input" type="text" name="company" onblur="if(this.value=='')this.value='Company';" onfocus="if(this.value=='Company')this.value='';" value="Company" />
+				
+					<input class="full-input" type="text" name="address" onblur="if(this.value=='')this.value='Address';" onfocus="if(this.value=='Address')this.value='';" value="Address" />
+				
+					<input class="half-input fl" type="text" name="city" onblur="if(this.value=='')this.value='City';" onfocus="if(this.value=='City')this.value='';" value="City" />
+					<input class="half-input fr" type="text" name="postcode" onblur="if(this.value=='')this.value='Postcode';" onfocus="if(this.value=='Postcode')this.value='';" value="Postcode" />
+				
+					<input class="half-input fl" type="text" name="country" onblur="if(this.value=='')this.value='Country';" onfocus="if(this.value=='Country')this.value='';" value="Country" />
+					<input class="half-input fr" type="text" name="state-county" onblur="if(this.value=='')this.value='State/County';" onfocus="if(this.value=='State/County')this.value='';" value="State/County" />
+				
+					<input class="half-input fl" type="text" name="email-address" onblur="if(this.value=='')this.value='Email Address';" onfocus="if(this.value=='Email Address')this.value='';" value="Email Address" />
+					<input class="half-input fr" type="text" name="phone" onblur="if(this.value=='')this.value='Phone number';" onfocus="if(this.value=='Phone number')this.value='';" value="Phone number" />
+				
+				</li>
+
+				<li class="col2 clearfix">
+				
+					<div class="tag-title-wrap clearfix">
+						<h4 class="tag-title">Shipping Addresses</h4>
+					</div>
+				
+					<input class="half-input fl" type="text" name="first-name" onblur="if(this.value=='')this.value='First name';" onfocus="if(this.value=='First name')this.value='';" value="First name" />
+					<input class="half-input fr" type="text" name="last-name" onblur="if(this.value=='')this.value='Last name';" onfocus="if(this.value=='Last name')this.value='';" value="Last name" />
+				
+					<input class="full-input" type="text" name="company" onblur="if(this.value=='')this.value='Company';" onfocus="if(this.value=='Company')this.value='';" value="Company" />
+				
+					<input class="full-input" type="text" name="address" onblur="if(this.value=='')this.value='Address';" onfocus="if(this.value=='Address')this.value='';" value="Address" />
+				
+					<input class="half-input fl" type="text" name="city" onblur="if(this.value=='')this.value='City';" onfocus="if(this.value=='City')this.value='';" value="City" />
+					<input class="half-input fr" type="text" name="postcode" onblur="if(this.value=='')this.value='Postcode';" onfocus="if(this.value=='Postcode')this.value='';" value="Postcode" />
+				
+					<input class="half-input fl" type="text" name="country" onblur="if(this.value=='')this.value='Country';" onfocus="if(this.value=='Country')this.value='';" value="Country" />
+					<input class="half-input fr" type="text" name="state-county" onblur="if(this.value=='')this.value='State/County';" onfocus="if(this.value=='State/County')this.value='';" value="State/County" />
+				
+					<input class="half-input fl" type="text" name="email-address" onblur="if(this.value=='')this.value='Email Address';" onfocus="if(this.value=='Email Address')this.value='';" value="Email Address" />
+					<input class="half-input fr" type="text" name="phone" onblur="if(this.value=='')this.value='Phone number';" onfocus="if(this.value=='Phone number')this.value='';" value="Phone number" />
+				
+				</li>
+			</ul>
+		
+			<div class="tag-title-wrap clearfix">
+				<h4 class="tag-title">Order Notes</h4>
+			</div>
+		
+			<p style="margin: 0 0 15px 0;">Add any additional information here such as special delivery requires etc</p>
+			<textarea name="message" id="message_text" class="text_input" cols="60" rows="9"></textarea>
+		
+			<div class="tag-title-wrap clearfix">
+				<h4 class="tag-title">Payment Method</h4>
+			</div>
+		
+			<p class="radio-wrapper"><input type="radio" name="payment-method" value="credit-card" /> Credit Card</p>
+			<p class="radio-wrapper"><input type="radio" name="payment-method" value="paypal" /> Paypal</p>
+			<p><input type="radio" name="payment-method" value="direct-bank-transfer" /> Direct Bank Transfer</p>
+		
+			<div class="tag-title-wrap clearfix">
+				<h4 class="tag-title">Your Order</h4>
+			</div>
+		
+			<table width="100%" class="account-table">
+				<thead>
+					<tr>
+						<th>Product #</th>
+						<th>Product Name</th>
+						<th>Qty</th>
+						<th>Unit Price</th>
+						<th>Total Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-title="Product #">0123</td>
+						<td data-title="Product Name">Summer Berry Candle Set</td>
+						<td data-title="Qty">1</td>
+						<td data-title="Unit Price">£49.99</td>
+						<td data-title="Total Price">£49.99</td>
+					</tr>
+					<tr>
+						<td data-title="Product #">0123</td>
+						<td data-title="Product Name">Summer Berry Candle Set</td>
+						<td data-title="Qty">1</td>
+						<td data-title="Unit Price">£49.99</td>
+						<td data-title="Total Price">£49.99</td>
+					</tr>
+					<tr>
+						<td data-title="Product #">0123</td>
+						<td data-title="Product Name">Summer Berry Candle Set</td>
+						<td data-title="Qty">1</td>
+						<td data-title="Unit Price">£49.99</td>
+						<td data-title="Total Price">£49.99</td>
+					</tr>
+					<tr>
+						<td data-title="Product #">0123</td>
+						<td data-title="Product Name">Summer Berry Candle Set</td>
+						<td data-title="Qty">1</td>
+						<td data-title="Unit Price">£49.99</td>
+						<td data-title="Total Price">£49.99</td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<div class="form-third">
+		
+				<div class="tag-title-wrap clearfix">
+					<h4 class="tag-title">Total</h4>
+				</div>
+		
+				<table width="100%" class="account-table">
+					<tbody>
+						<tr>
+							<td><strong>Subtotal</strong></td>
+							<td>£599.88</td>
+						</tr>
+						<tr>
+							<td><strong>Shipping</strong></td>
+							<td>Free Shipping</td>
+						</tr>
+						<tr>
+							<td><strong>Order Total</strong></td>
+							<td>£599.88</td>
+						</tr>
+					</tbody>
+				</table>
+		
+				<input class="button2 fr" type="submit" value="Place Order &raquo;" id="submit" name="submit" />
+		
+			</div>
+		
+		</form>
+
+	<!-- END .section -->
+	</div>
+</template>

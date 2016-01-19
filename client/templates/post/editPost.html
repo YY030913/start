@@ -1,0 +1,17 @@
+<template name="editpost">
+<div name="post-content" id="post-content" contentEditable="true" placeholder="Enter your post content"></div> 
+<div class="left-side">
+	<input type="text" class="positive_input" /><input type="button" class="positive_button" value="正"/>
+</div>
+<div class="right-side">
+	<input type="button" class="negative_button" value="反" /><input type="text" class="negative_input" />
+</div>
+<div class="toolbar">
+	<div class="btn-group" role="group" aria-label="Basic example"> 
+
+		<button type="button" class="btn btn-default fa fa-file-image-o">图片</button> 
+		<button type="button" class="btn btn-default fa fa-file-video-o">视频</button>
+	</div>
+</div>
+<input type="file" style="visibility:hidden" id="upload_img" accept="image/*">
+</template>

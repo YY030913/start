@@ -1,0 +1,38 @@
+<template name="userdebates">
+
+	<!-- Main -->
+	<div id="main">
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<!-- Mini Posts -->
+			<section>
+				<div class="mini-posts">
+
+					{{#each debates}}
+					<!-- Mini Post -->
+					<article class="mini-post">
+						<header>
+							<h3>
+								<a href="post/{{postId}}">{{unescape debateContent}}</a>
+							</h3>
+							<time class="published" datetime="{{momentFormate time}}">{{momentFormate time}}</time>
+							<a class="author">
+								<img src="{{account.profile.avator}}" alt="" />
+							</a>
+						</header>
+						<section>
+							{{post.postTitle}}
+							
+						</section>
+					</article>
+					{{else}}
+						还没有发表过观点
+					{{/each}}
+
+				</div>
+			</section>
+
+		</section>
+	</div>
+
+</template>

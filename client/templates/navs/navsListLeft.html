@@ -1,5 +1,26 @@
 <template name="navsListLeft">
-	{{#each navsList}}
-		<a href="{{name}}" class="needsclick item {{activeNavClass name}}" title="{{name}}">{{name}}</a>
-	{{/each}}
+{{#if isInRole 'admin' 'web-owner'}}
+	<li>
+		<a href="#" class="add-nav">
+			<h3>New List</h3>
+		</a>
+	</li>  
+{{/if}}
+{{#each navsList}}
+    {{#if isInRole 'admin' 'web-owner'}}
+    <li class="{{activeNavClass href}}">
+		<a>
+			<h3><input type="text" name="name" value="{{name}}" /></h3>
+			<p><input type="text" name="href" value="{{href}}" /></p>
+		</a>
+	</li>       
+	{{else}}
+	<li class="{{activeNavClass href}}">
+		<a href="{{href}}">
+			<h3>{{name}}</h3>
+			<!-- <p>Feugiat tempus veroeros dolor</p> -->
+		</a>
+	</li>
+	{{/if}}
+{{/each}} 
 </template>

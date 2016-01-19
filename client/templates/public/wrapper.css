@@ -1,0 +1,112 @@
+/* Wrapper */
+
+	#wrapper {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-perspective: 1000px;
+		-webkit-perspective: 1000px;
+		-ms-perspective: 1000px;
+		perspective: 1000px;
+		position: relative;
+		/*min-height: 3.5em;*/
+		height: calc(100% - 5em);
+		padding: 1.5em;
+		z-index: 3;
+	}
+
+	/*#wrapper > * {
+		z-index: 1;
+	}*/
+
+	#wrapper:before {
+		content: '';
+		display: block;
+	}
+
+	@media screen and (max-width: 360px) {
+
+		#wrapper {
+			padding: 0.75em;
+		}
+
+	}
+
+	body.is-ie #wrapper {
+		height: 100%;
+	}
+
+/* Wrappers */
+
+.wrapper {
+	background-image: url("images/bg.png");
+	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+	.wrapper.first {
+		box-shadow: none;
+	}
+
+	.wrapper.style1 {
+		background-image: none;
+		background-color: #fff;
+	}
+
+	.wrapper.style2 {
+		background-color: #fafafa;
+		text-shadow: 1px 1px 0px #fff;
+	}
+
+	.wrapper.style3 {
+		background-color: #f4f4f4;
+		text-shadow: 1px 1px 0px #fff;
+	}
+
+	.wrapper.style4 {
+		background-color: #303030;
+		color: #999;
+		text-shadow: -1px -1px 0px #181818;
+	}
+
+		.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
+			color: #fff;
+		}
+
+		.wrapper.style4 form input[type=text],
+		.wrapper.style4 form input[type=password],
+		.wrapper.style4 form select,
+		.wrapper.style4 form textarea {
+			border: none;
+			background: #282828;
+		}
+
+			.wrapper.style4 form input[type=text]:focus,
+			.wrapper.style4 form input[type=password]:focus,
+			.wrapper.style4 form select:focus,
+			.wrapper.style4 form textarea:focus {
+				background: #252525;
+			}
+
+/* Wrappers */
+
+.wrapper {
+	padding: 8em 0 8em 0;
+	text-align: center;
+}
+
+	.wrapper.first {
+		padding-top: 1em;
+	}

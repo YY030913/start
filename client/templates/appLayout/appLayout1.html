@@ -1,0 +1,56 @@
+<template name="appLayout1">
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <div class="ui container vertical segment">
+            {{#if currentUser}}
+            <h2 class="ui center aligned icon header">
+
+                <div class="ui small image icon avatar">
+                    <img src="./img/1.jpg" class="ui avatar spaced circular image"/>
+                </div>
+
+                <div class="ui container white padding1 size18">{{username}}</div>
+                <div class="ui continer gray padding1 size12">
+                    {{userLocationAddres.country}} - {{userLocationAddres.administrative_area_level_1}}
+                </div>
+                <a class="needsclick js-logout btn-secondary">Logout</a>
+            </h2>
+            {{else}}
+            <h2 class="ui center aligned icon header">
+
+                <div class="ui small image icon avatar">
+                    <img src="./img/1.jpg" class="ui avatar spaced circular image"/>
+                </div>
+                <div class="ui continer white padding1 size18">guest</div>
+                <div class="ui continer gray padding1 size12">
+                    {{userLocationAddres.country}} - {{userLocationAddres.administrative_area_level_1}}
+                </div>
+                <a href="{{pathFor route='signin'}}" class="ui needsclick button login">Log in</a>
+                <a href="{{pathFor route='register'}}"  class="ui needsclick primary button">Sign Up</a>
+            </h2>
+            {{/if}}
+        </div>
+        {{> navsListLeft}}
+    </div>
+
+    <div class="pusher">{{> yield}}</div>
+
+    <!--footer begin-->
+    <footer>
+        <div id="copyrights">
+            <div class="inset">
+                <div class="bigcontainer">
+                    <div class="fl">
+                        <div class="logo"></div>
+                        <p>
+                            &copy; 2020 青岛亿联客信息技术有限公司, 版权所有
+                            <br />
+                            <a href="http://www.miibeian.gov.cn" target="_blank">鲁ICP备12022271号</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>

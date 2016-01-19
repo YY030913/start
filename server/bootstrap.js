@@ -4,12 +4,14 @@ Meteor.startup(function() {
 	if (navigationsColl.find().count() == 0) {
 	    var data = [
 	      	{
-	      		name: "Home"
+	      		name: "无妄之争",
+	      		href: "/home"
 	      	},
 	    ];
 		var timestamp = (new Date()).getTime();
 	    _.each(data, function(list) {
 	      	var list_id = navigationsColl.insert({name: list.name,
+	      		href: list.href,
 	        	totalCount: 0});
 	    });	
 	};
@@ -91,4 +93,46 @@ Meteor.startup(function() {
 	// 		"vcf": "text/x-vcard"
 	// 	}
 	// });
+
+
+
+	createAccountService = function(service, appId, secret) {
+		ServiceConfiguration.configurations.remove({
+			service: service,
+		});
+		switch(service) {
+			case "wechat":
+				ServiceConfiguration.configurations.insert({
+					service: "wechat",
+					appId: "wx0ed57f40d3575ef7",
+					scope: 'basic',
+					secret: "0eda9774836ee729111384e3380c7b26"
+				});
+				break;
+			case "google":
+				ServiceConfiguration.configurations.insert({
+					service: "google",
+					loginStyle: "popup",
+					clientId: "282710845697-rlerblta4drj4qqt7ugsq0jsg0h29j0g.apps.googleusercontent.com",
+					secret: "JbGkizq41eZQORnBi8myIEpc"
+				});
+				break;
+			case "weibo":
+				ServiceConfiguration.configurations.upsert({
+					service: "weibo"
+				}, {
+					$set: {
+						clientId: "988657102",
+						loginStyle: "popup",
+						secret: "12b2288e921fb1f37977f01031a5d18c"
+					}
+				});
+				break;
+		}
+	}
+
+	createAccountService("wechat");
+	createAccountService("google");
+	createAccountService("weibo");
+
 })
